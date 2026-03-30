@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="pt-MZ" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESSENCE Consultoria e Serviços | O seu futuro começa aqui</title>
+    <meta name="description" content="Impulsionamos negócios e carreiras com estratégias que geram resultados reais em Moçambique.">
+    
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'essence-blue': '#001F3F',
+                        'essence-gold': '#C5A059',
+                        'essence-orange': '#E67E22',
+                        'essence-dark': '#050A14',
+                        'essence-cream': '#F8F5F0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'scroll-line': {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        @layer base {
+            body {
+                font-family: 'Inter', sans-serif;
+                color: #001F3F;
+                background-color: #ffffff;
+                overflow-x: hidden;
+            }
+            h1, h2, h3, .font-serif {
+                font-family: 'Playfair Display', serif;
+            }
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(#C5A059 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.1;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 31, 63, 0.05);
+        }
+
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: 1;
+        }
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.6s;
+            z-index: -1;
+        }
+        .btn-premium:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background-color: #E67E22;
+            color: white;
+            font-weight: 600;
+            padding: 0.85rem 2.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+        .btn-primary:hover {
+            background-color: #D35400;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #001F3F;
+            font-weight: 600;
+            padding: 0.85rem 2.5rem;
+            border: 2px solid #001F3F;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+        .btn-secondary:hover {
+            background-color: #001F3F;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            font-weight: 600;
+            padding: 0.85rem 2.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(37, 211, 102, 0.4);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #001F3F;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3.5rem;
+            }
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #64748b;
+            margin-bottom: 4rem;
+            max-width: 36rem;
+            line-height: 1.6;
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -12px rgba(0, 31, 63, 0.15);
+        }
+
+        .premium-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(0, 31, 63, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(230, 126, 34, 0.05),
+                transparent
+            );
+            transition: 0.5s;
+        }
+        .premium-card:hover::before {
+            left: 100%;
+        }
+        .premium-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 40px 80px -15px rgba(0, 31, 63, 0.12);
+            border-color: rgba(230, 126, 34, 0.4);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #001F3F;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E67E22;
+        }
+
+        /* Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .premium-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0, 31, 63, 0.1);
+        }
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 10, 20, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+        .modal-content {
+            background: white;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 2rem;
+            padding: 2.5rem;
+            position: relative;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="selection:bg-essence-orange selection:text-white">
+    <div class="grain-overlay"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-essence-blue backdrop-blur-md py-4 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#home" class="flex items-center gap-4 group">
+                        <div class="relative w-12 h-12 bg-essence-orange flex items-center justify-center shadow-xl transition-transform group-hover:rotate-12">
+                            <i data-lucide="diamond" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif font-bold text-2xl leading-none tracking-tight text-white">ESSENCE</span>
+                            <span class="text-[9px] font-medium tracking-[0.3em] uppercase text-essence-gold">Consultoria & Serviços</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-10">
+                        <a href="#home" class="text-sm font-medium transition-colors text-white hover:text-essence-orange">Início</a>
+                        <a href="#marketing" class="text-sm font-medium transition-colors text-white hover:text-essence-orange">Marketing</a>
+                        <a href="#carreira" class="text-sm font-medium transition-colors text-white hover:text-essence-orange">Carreira</a>
+                        <a href="#sobre" class="text-sm font-medium transition-colors text-white hover:text-essence-orange">Sobre</a>
+                        <a href="#contacto" class="text-sm font-medium transition-colors text-white hover:text-essence-orange">Contacto</a>
+                        <a href="https://wa.me/258873453569" target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-premium !py-2.5 !px-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.4-16.5-14.7-27.6-32.8-30.8-38.3-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 rounded-md text-white focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon" class="w-8 h-8"></i>
+                        <i data-lucide="x" id="close-icon" class="w-8 h-8 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-essence-blue border-t border-white/5 overflow-hidden transition-all duration-300">
+            <div class="px-6 pt-4 pb-8 space-y-4">
+                <a href="#home" class="mobile-nav-link block text-lg font-serif text-white hover:text-essence-orange">Início</a>
+                <a href="#marketing" class="mobile-nav-link block text-lg font-serif text-white hover:text-essence-orange">Marketing</a>
+                <a href="#carreira" class="mobile-nav-link block text-lg font-serif text-white hover:text-essence-orange">Carreira</a>
+                <a href="#sobre" class="mobile-nav-link block text-lg font-serif text-white hover:text-essence-orange">Sobre</a>
+                <a href="#contacto" class="mobile-nav-link block text-lg font-serif text-white hover:text-essence-orange">Contacto</a>
+                <a href="https://wa.me/258873453569" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full text-center bg-essence-orange text-white font-bold py-4 mt-6 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 fill-current"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.4-16.5-14.7-27.6-32.8-30.8-38.3-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-essence-cream">
+            <div class="absolute inset-0 z-0 opacity-40">
+                <div class="bg-pattern absolute inset-0"></div>
+                <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-essence-gold/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+                <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-essence-blue/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+                <div class="grid lg:grid-cols-12 gap-16 items-center">
+                    <div class="lg:col-span-7 reveal-left active">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="h-[1px] w-12 bg-essence-gold"></div>
+                            <span class="text-essence-gold font-medium tracking-[0.2em] uppercase text-xs">O seu futuro começa aqui</span>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-bold text-essence-blue leading-[1.1] mb-8">
+                            Estratégias que elevam o seu <span class="italic text-essence-orange">potencial</span> ao máximo.
+                        </h1>
+                        <p class="text-xl text-slate-600 mb-12 max-w-xl leading-relaxed">
+                            Consultoria especializada em marketing digital e desenvolvimento de carreira para quem busca excelência no mercado moçambicano.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-6">
+                            <a href="https://wa.me/258873453569" target="_blank" rel="noopener noreferrer" class="btn-primary btn-premium flex items-center justify-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 fill-current"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.4-16.5-14.7-27.6-32.8-30.8-38.3-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                                Começar Agora
+                            </a>
+                            <a href="#marketing" class="btn-secondary flex items-center justify-center gap-3">
+                                Nossos Serviços
+                            </a>
+                        </div>
+                        
+                        <div class="mt-16 flex items-center gap-8 border-t border-essence-gold/20 pt-8">
+                            <div>
+                                <p class="text-3xl font-serif font-bold text-essence-blue">150+</p>
+                                <p class="text-xs uppercase tracking-widest text-slate-500 mt-1">Empresas</p>
+                            </div>
+                            <div class="w-[1px] h-10 bg-essence-gold/20"></div>
+                            <div>
+                                <p class="text-3xl font-serif font-bold text-essence-blue">500+</p>
+                                <p class="text-xs uppercase tracking-widest text-slate-500 mt-1">Carreiras</p>
+                            </div>
+                            <div class="w-[1px] h-10 bg-essence-gold/20"></div>
+                            <div class="flex -space-x-3">
+                                <img src="https://i.pravatar.cc/100?u=1" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                                <img src="https://i.pravatar.cc/100?u=2" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                                <img src="https://i.pravatar.cc/100?u=3" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                                <div class="w-10 h-10 rounded-full border-2 border-white bg-essence-gold flex items-center justify-center text-[10px] font-bold text-white">+</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 relative reveal-right active">
+                        <div class="relative z-10">
+                            <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,31,63,0.3)] border-[12px] border-white">
+                                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1000&q=80" alt="Executive Professional" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+                            </div>
+                            
+                            <!-- Floating Badge -->
+                            <div class="absolute -bottom-10 -left-10 glass-card p-8 rounded-2xl animate-float">
+                                <div class="flex items-center gap-5">
+                                    <div class="w-14 h-14 bg-essence-blue rounded-full flex items-center justify-center text-essence-gold shadow-inner">
+                                        <i data-lucide="award" class="w-8 h-8"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs uppercase tracking-widest text-slate-500 font-bold">Certificação</p>
+                                        <p class="text-lg font-serif font-bold text-essence-blue">Excelência 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-essence-orange/10 rounded-full blur-2xl"></div>
+                        <div class="absolute top-1/2 -right-4 w-24 h-24 border-2 border-essence-gold/30 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 opacity-50">
+                    <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-essence-blue">Scroll</span>
+                    <div class="w-[1px] h-12 bg-essence-blue relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full bg-essence-orange animate-[scroll-line_2s_infinite]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketing Section -->
+        <section id="marketing" class="py-32 bg-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 reveal">
+                    <div class="max-w-2xl">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="h-[1px] w-12 bg-essence-orange"></div>
+                            <span class="text-essence-orange font-medium tracking-[0.2em] uppercase text-xs">Soluções Digitais</span>
+                        </div>
+                        <h2 class="section-title">Marketing que gera <span class="text-essence-gold italic">valor</span>.</h2>
+                        <p class="text-lg text-slate-600 leading-relaxed">
+                            Não apenas posts, mas estratégias de crescimento sustentável para o seu negócio se destacar no ambiente digital.
+                        </p>
+                    </div>
+                    <div class="mt-8 md:mt-0">
+                        <a href="#contacto" class="group flex items-center gap-3 font-bold text-essence-blue hover:text-essence-orange transition-colors">
+                            Ver todos os planos
+                            <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gestão de Redes Sociais Section -->
+                <div class="text-center mb-12 reveal mt-20">
+                    <h3 class="text-2xl font-bold text-essence-blue">Gestão de Redes Sociais</h3>
+                    <p class="text-slate-500 max-w-2xl mx-auto mt-4">Planos estratégicos para dominar o Instagram, Facebook e LinkedIn com preços promocionais.</p>
+                    <div class="w-20 h-1 bg-essence-orange mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                    <!-- Plan 1 -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-xl cursor-pointer group"
+                         onclick="openServiceModal('basico')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-gold group-hover:bg-essence-gold group-hover:text-white transition-colors">
+                                <i data-lucide="layout" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-blue/5 text-essence-blue text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Mensal</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">Gestão de Redes: Básico</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Ideal para quem está a começar a sua presença digital.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">7.500 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">5.000 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan 2 -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-xl cursor-pointer group"
+                         onclick="openServiceModal('intermedio')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-gold group-hover:bg-essence-gold group-hover:text-white transition-colors">
+                                <i data-lucide="layers" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-blue/5 text-essence-blue text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Mensal</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">Gestão de Redes: Intermédio</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Crescimento acelerado com mais conteúdos e estratégia.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">15.000 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">10.000 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan 3 -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-xl border-2 border-essence-orange cursor-pointer group relative"
+                         onclick="openServiceModal('premium')">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-essence-orange text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest z-20">Mais Procurado 🔥</div>
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-orange rounded-2xl flex items-center justify-center text-white shadow-lg">
+                                <i data-lucide="rocket" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-orange/10 text-essence-orange text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Full Strategy</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">Gestão de Redes: Premium</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">A solução completa para dominar o seu mercado digital.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">22.500 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">15.000 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Sites Section -->
+                <div class="text-center mb-12 reveal">
+                    <h3 class="text-2xl font-bold text-essence-blue">Pacotes de Web Sites Profissionais</h3>
+                    <div class="w-20 h-1 bg-essence-orange mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                    <!-- Website STARTER -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-xl cursor-pointer group"
+                         onclick="openServiceModal('website-starter')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-blue rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:bg-essence-orange transition-colors">
+                                <i data-lucide="globe" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-blue/5 text-essence-blue text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Básico</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">STARTER</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Para começar a sua presença online com profissionalismo.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">2.250 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">1.500 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Website GROWTH -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-xl cursor-pointer group"
+                         onclick="openServiceModal('website-growth')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-blue rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:bg-essence-orange transition-colors">
+                                <i data-lucide="trending-up" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-blue/5 text-essence-blue text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Intermédio</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">GROWTH</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Para negócios que querem crescer e atrair clientes.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">5.250 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">3.500 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Website PREMIUM -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-xl border-2 border-essence-orange cursor-pointer group relative"
+                         onclick="openServiceModal('website-premium')">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-essence-orange text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest z-20">Mais Escolhido 🔥</div>
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-orange rounded-2xl flex items-center justify-center text-white shadow-lg">
+                                <i data-lucide="rocket" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-orange/10 text-essence-orange text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Avançado</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">PREMIUM</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Para empresas que querem dominar o digital.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">10.500 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">7.000 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website Differentials -->
+                <div class="reveal bg-essence-blue/5 rounded-3xl p-8 mb-20 border border-essence-blue/10">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-essence-orange shadow-sm">
+                                <i data-lucide="check-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-essence-blue">Pagamento Único</h5>
+                                <p class="text-xs text-slate-500">Sem mensalidades ocultas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-essence-orange shadow-sm">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-essence-blue">Entrega Rápida</h5>
+                                <p class="text-xs text-slate-500">O seu site online em tempo recorde.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-essence-orange shadow-sm">
+                                <i data-lucide="target" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-essence-blue">Foco em Resultados</h5>
+                                <p class="text-xs text-slate-500">Soluções pensadas para gerar clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outros Serviços Section -->
+                <div class="text-center mb-12 reveal">
+                    <h3 class="text-2xl font-bold text-essence-blue">Outros Serviços de Marketing</h3>
+                    <div class="w-20 h-1 bg-essence-orange mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                    <!-- New Service: Identidade Visual -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-xl cursor-pointer group" 
+                         onclick="openServiceModal('identidade-visual')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-gold group-hover:bg-essence-gold group-hover:text-white transition-colors">
+                                <i data-lucide="palette" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-orange/10 text-essence-orange text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Oferta</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">Identidade Visual</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Marca, Logotipo e Panfleto profissional para destacar o seu negócio.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">2.250 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">1.500 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Service: Portfolio -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-xl cursor-pointer group"
+                         onclick="openServiceModal('portfolio')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-gold group-hover:bg-essence-gold group-hover:text-white transition-colors">
+                                <i data-lucide="briefcase" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-orange/10 text-essence-orange text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Oferta</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">Portfólio de Negócio</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Apresentação profissional do seu negócio para atrair parceiros e clientes.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">2.250 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">1.500 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Section -->
+        <section id="carreira" class="py-32 bg-essence-cream relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20 reveal">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-essence-blue/5 p-4 rounded-full text-essence-blue">
+                            <i data-lucide="graduation-cap" class="w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Carreira & <span class="text-essence-orange italic">Sucesso</span></h2>
+                    <p class="section-subtitle mx-auto">
+                        Capacitação de alto nível para profissionais que não aceitam o comum. O seu próximo salto na carreira começa aqui com as nossas soluções de elite.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+                    <!-- CV PT -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-lg cursor-pointer group"
+                         onclick="openServiceModal('cv-pt')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-blue group-hover:bg-essence-blue group-hover:text-white transition-all">
+                                <i data-lucide="file-text" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-orange/10 text-essence-orange text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Popular</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">CV de Elite (PT)</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Currículo estratégico optimizado para o mercado nacional e sistemas ATS.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">445 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">297 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CV EN -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-lg cursor-pointer group"
+                         onclick="openServiceModal('cv-en')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-blue group-hover:bg-essence-blue group-hover:text-white transition-all">
+                                <i data-lucide="languages" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-blue/5 text-essence-blue text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Global</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">CV de Elite (EN)</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Currículo profissional em inglês para o mercado internacional.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">540 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">359 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-lg cursor-pointer group"
+                         onclick="openServiceModal('linkedin-pro')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-blue group-hover:bg-essence-blue group-hover:text-white transition-all">
+                                <i data-lucide="linkedin" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-orange/10 text-essence-orange text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">SEO</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">LinkedIn Pro</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Otimização completa do seu perfil profissional para atrair recrutadores.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">600 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">399 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carta PT -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-lg cursor-pointer group"
+                         onclick="openServiceModal('carta-pt')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-blue group-hover:bg-essence-blue group-hover:text-white transition-all">
+                                <i data-lucide="mail" class="w-7 h-7"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">Carta de Apres. (PT)</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Carta persuasiva personalizada para candidaturas nacionais.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">240 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">159 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carta EN -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-lg cursor-pointer group"
+                         onclick="openServiceModal('carta-en')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-blue group-hover:bg-essence-blue group-hover:text-white transition-all">
+                                <i data-lucide="globe" class="w-7 h-7"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">Carta de Apres. (EN)</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Cover Letter profissional para o mercado global e multinacionais.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">255 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">169 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mentoria VIP -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-lg border-2 border-essence-orange cursor-pointer group relative"
+                         onclick="openServiceModal('mentoria-vip')">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-essence-orange text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest z-20">Mais Procurado 🔥</div>
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-orange rounded-2xl flex items-center justify-center text-white shadow-lg">
+                                <i data-lucide="users" class="w-7 h-7"></i>
+                            </div>
+                            <span class="bg-essence-orange/10 text-essence-orange text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">VIP</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">Mentoria VIP</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Preparação intensiva para entrevistas e negociação salarial.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">3.750 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">2.500 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plano de Voo -->
+                    <div class="reveal premium-card rounded-3xl p-8 shadow-lg cursor-pointer group"
+                         onclick="openServiceModal('plano-voo')">
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div class="w-14 h-14 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-blue group-hover:bg-essence-blue group-hover:text-white transition-all">
+                                <i data-lucide="compass" class="w-7 h-7"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-essence-blue mb-2 relative z-10">Plano de Voo</h4>
+                        <p class="text-sm text-slate-500 mb-6 line-clamp-2 relative z-10">Mapeamento de competências e definição de metas de carreira.</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="text-xs text-slate-400 line-through">1.500 MT</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-bold text-essence-blue">1.000 MT</span>
+                                <span class="text-[10px] font-bold text-essence-orange uppercase">Promo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Course -->
+                <div class="reveal bg-essence-blue rounded-[40px] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,31,63,0.4)]">
+                    <div class="grid lg:grid-cols-2">
+                        <div class="p-12 lg:p-20 text-white flex flex-col justify-center">
+                            <div class="flex items-center gap-3 mb-8">
+                                <span class="w-8 h-[1px] bg-essence-orange"></span>
+                                <span class="text-essence-orange font-bold text-xs uppercase tracking-[0.3em]">Treinamento Master</span>
+                            </div>
+                            <h3 class="text-4xl lg:text-5xl font-bold mb-8 leading-tight">Call Center & Atendimento de Luxo</h3>
+                            <p class="text-blue-100 text-lg mb-10 leading-relaxed">
+                                Não é apenas atendimento, é experiência do cliente. Aprenda as técnicas das maiores multinacionais.
+                            </p>
+                            
+                            <div class="grid sm:grid-cols-2 gap-6 mb-12">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-essence-orange">
+                                        <i data-lucide="check" class="w-5 h-5"></i>
+                                    </div>
+                                    <span class="font-medium">Comunicação de Elite</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-essence-orange">
+                                        <i data-lucide="check" class="w-5 h-5"></i>
+                                    </div>
+                                    <span class="font-medium">Gestão de Conflitos</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row items-center gap-10">
+                                <div>
+                                    <p class="text-blue-300 text-xs uppercase tracking-widest mb-1">Investimento</p>
+                                    <p class="text-4xl font-bold">1.250 <span class="text-lg font-normal text-blue-300">MZN</span></p>
+                                </div>
+                                <a href="https://wa.me/258873453569?text=Olá! Gostaria de me inscrever no curso de Call Center e Atendimento ao Cliente." target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-premium w-full sm:w-auto text-center">Garantir Vaga</a>
+                            </div>
+                        </div>
+                        <div class="relative min-h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80" alt="Professional Training" class="absolute inset-0 w-full h-full object-cover" referrerpolicy="no-referrer">
+                            <div class="absolute inset-0 bg-gradient-to-t from-essence-blue via-essence-blue/20 to-transparent lg:bg-gradient-to-r lg:from-essence-blue lg:to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="py-32 bg-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div class="reveal-left">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="h-[1px] w-12 bg-essence-gold"></div>
+                            <span class="text-essence-gold font-medium tracking-[0.2em] uppercase text-xs">Nossa Essência</span>
+                        </div>
+                        <h2 class="section-title">Excelência em cada <span class="text-essence-orange italic">detalhe</span>.</h2>
+                        <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                            A ESSENCE nasceu da vontade de transformar o mercado moçambicano, unindo tecnologia, estratégia e o desenvolvimento do capital humano.
+                        </p>
+                        
+                        <div class="space-y-10">
+                            <div class="flex gap-6 pl-6 border-l-2 border-essence-gold/20 hover:border-essence-gold transition-colors">
+                                <div class="w-12 h-12 shrink-0 bg-essence-cream rounded-full flex items-center justify-center text-essence-gold">
+                                    <i data-lucide="target" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-essence-blue mb-2">Missão</h4>
+                                    <p class="text-slate-600 leading-relaxed">Capacitar empresas e indivíduos através de soluções inovadoras que geram impacto real e sustentável.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 pl-6 border-l-2 border-essence-gold/20 hover:border-essence-gold transition-colors">
+                                <div class="w-12 h-12 shrink-0 bg-essence-cream rounded-full flex items-center justify-center text-essence-gold">
+                                    <i data-lucide="eye" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-essence-blue mb-2">Visão</h4>
+                                    <p class="text-slate-600 leading-relaxed">Ser a consultoria líder em Moçambique, reconhecida pela excelência técnica e compromisso com o sucesso do cliente.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 pl-6 border-l-2 border-essence-gold/20 hover:border-essence-gold transition-colors">
+                                <div class="w-12 h-12 shrink-0 bg-essence-cream rounded-full flex items-center justify-center text-essence-gold">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-essence-blue mb-2">Valores</h4>
+                                    <p class="text-slate-600 leading-relaxed">Ética, Agilidade, Foco no Cliente e Excelência Global em tudo o que fazemos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal-right">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="h-[1px] w-12 bg-essence-gold"></div>
+                            <span class="text-essence-gold font-medium tracking-[0.2em] uppercase text-xs">Nossos Valores</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-essence-blue mb-12">Valores que nos <span class="text-essence-gold italic">guiam</span></h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-6 mt-12">
+                            <div class="bg-essence-cream p-8 rounded-2xl border border-essence-gold/10 card-hover">
+                                <i data-lucide="shield-check" class="w-8 h-8 text-essence-gold mb-4"></i>
+                                <h5 class="font-bold text-essence-blue mb-2">Ética</h5>
+                                <p class="text-xs text-slate-500">Transparência total em todas as nossas relações.</p>
+                            </div>
+                            <div class="bg-essence-blue p-8 rounded-2xl text-white card-hover">
+                                <i data-lucide="zap" class="w-8 h-8 text-essence-orange mb-4"></i>
+                                <h5 class="font-bold mb-2">Agilidade</h5>
+                                <p class="text-xs text-blue-200">Respostas rápidas para um mercado dinâmico.</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="bg-essence-dark p-8 rounded-2xl text-white card-hover">
+                                <i data-lucide="users" class="w-8 h-8 text-essence-gold mb-4"></i>
+                                <h5 class="font-bold mb-2">Foco no Cliente</h5>
+                                <p class="text-xs text-slate-400">O seu sucesso é a nossa maior métrica.</p>
+                            </div>
+                            <div class="bg-essence-cream p-8 rounded-2xl border border-essence-gold/10 card-hover">
+                                <i data-lucide="globe" class="w-8 h-8 text-essence-gold mb-4"></i>
+                                <h5 class="font-bold text-essence-blue mb-2">Global</h5>
+                                <p class="text-xs text-slate-500">Padrões internacionais aplicados localmente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="py-32 bg-essence-dark text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5">
+                <div class="bg-pattern absolute inset-0"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid md:grid-cols-4 gap-12 mb-32">
+                    <div class="text-center reveal-scale">
+                        <p class="text-6xl font-serif font-bold text-essence-gold mb-4">150+</p>
+                        <p class="text-slate-400 uppercase tracking-[0.3em] text-[10px] font-bold">Clientes Premium</p>
+                    </div>
+                    <div class="text-center reveal-scale" style="transition-delay: 0.1s;">
+                        <p class="text-6xl font-serif font-bold text-essence-gold mb-4">500+</p>
+                        <p class="text-slate-400 uppercase tracking-[0.3em] text-[10px] font-bold">Carreiras Transformadas</p>
+                    </div>
+                    <div class="text-center reveal-scale" style="transition-delay: 0.2s;">
+                        <p class="text-6xl font-serif font-bold text-essence-gold mb-4">200+</p>
+                        <p class="text-slate-400 uppercase tracking-[0.3em] text-[10px] font-bold">Líderes Formados</p>
+                    </div>
+                    <div class="text-center reveal-scale" style="transition-delay: 0.3s;">
+                        <p class="text-6xl font-serif font-bold text-essence-gold mb-4">98%</p>
+                        <p class="text-slate-400 uppercase tracking-[0.3em] text-[10px] font-bold">Satisfação</p>
+                    </div>
+                </div>
+
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Vozes da <span class="text-essence-gold">Experiência</span></h2>
+                    <div class="w-24 h-[2px] bg-essence-gold mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="reveal-left bg-white/5 backdrop-blur-md p-12 rounded-[32px] border border-white/10 relative">
+                        <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-white/5"></i>
+                        <div class="flex gap-1 text-essence-gold mb-8">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-xl font-serif italic mb-10 leading-relaxed text-slate-200">"A ESSENCE não apenas prestou um serviço, eles tornaram-se parceiros estratégicos. O crescimento da nossa marca foi exponencial."</p>
+                        <div class="flex items-center gap-5">
+                            <div class="relative">
+                                <img src="https://i.pravatar.cc/100?u=maria" class="w-14 h-14 rounded-full border-2 border-essence-gold" alt="Maria Santos">
+                                <div class="absolute -bottom-1 -right-1 bg-essence-blue text-essence-gold rounded-full p-1 shadow-lg">
+                                    <i data-lucide="check-circle-2" class="w-3 h-3 fill-current"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg">Maria Santos</p>
+                                <p class="text-sm text-essence-gold uppercase tracking-widest">CEO, Boutique de Luxo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal-right bg-white/5 backdrop-blur-md p-12 rounded-[32px] border border-white/10 relative">
+                        <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-white/5"></i>
+                        <div class="flex gap-1 text-essence-gold mb-8">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-xl font-serif italic mb-10 leading-relaxed text-slate-200">"O acompanhamento na transição de carreira foi impecável. Consegui uma posição internacional graças à mentoria."</p>
+                        <div class="flex items-center gap-5">
+                            <div class="relative">
+                                <img src="https://i.pravatar.cc/100?u=joao" class="w-14 h-14 rounded-full border-2 border-essence-gold" alt="João Langa">
+                                <div class="absolute -bottom-1 -right-1 bg-essence-blue text-essence-gold rounded-full p-1 shadow-lg">
+                                    <i data-lucide="check-circle-2" class="w-3 h-3 fill-current"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg">João Langa</p>
+                                <p class="text-sm text-essence-gold uppercase tracking-widest">Engenheiro de Software</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-32 bg-essence-cream relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-24">
+                    <div class="reveal-left">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="h-[1px] w-12 bg-essence-gold"></div>
+                            <span class="text-essence-gold font-medium tracking-[0.2em] uppercase text-xs">Contacto</span>
+                        </div>
+                        <h2 class="section-title text-left">Vamos desenhar o seu <span class="text-essence-orange italic">sucesso</span>?</h2>
+                        <p class="text-xl text-slate-600 mb-12 leading-relaxed">
+                            Agende uma consultoria estratégica e descubra como a ESSENCE pode transformar os seus resultados.
+                        </p>
+
+                        <div class="space-y-8">
+                            <a href="https://wa.me/258873453569" class="flex items-center gap-6 p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all group border border-essence-gold/5">
+                                <div class="w-14 h-14 bg-[#25D366] text-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-7 h-7 fill-current"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.4-16.5-14.7-27.6-32.8-30.8-38.3-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold mb-1">WhatsApp Business</p>
+                                    <p class="text-2xl font-serif font-bold text-essence-blue">+258 873 453 569</p>
+                                </div>
+                            </a>
+
+                            <a href="mailto:essenceinfomz@gmail.com" class="flex items-center gap-6 p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all group border border-essence-gold/5">
+                                <div class="w-14 h-14 bg-essence-orange text-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="mail" class="w-7 h-7"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold mb-1">Email Oficial</p>
+                                    <p class="text-2xl font-serif font-bold text-essence-blue">essenceinfomz@gmail.com</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mt-16 flex gap-6">
+                            <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-essence-blue shadow-sm hover:bg-essence-gold hover:text-white transition-all">
+                                <i data-lucide="instagram" class="w-6 h-6"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-essence-blue shadow-sm hover:bg-essence-gold hover:text-white transition-all">
+                                <i data-lucide="facebook" class="w-6 h-6"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-essence-blue shadow-sm hover:bg-essence-gold hover:text-white transition-all">
+                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="reveal-right bg-white p-12 rounded-[40px] shadow-[0_40px_80px_-15px_rgba(0,31,63,0.1)] border border-essence-gold/10">
+                        <h3 class="text-3xl font-serif font-bold text-essence-blue mb-8">Solicitar Orçamento</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold uppercase tracking-widest text-slate-500">Nome Completo</label>
+                                    <input type="text" required class="w-full p-4 rounded-xl bg-essence-cream border-none focus:ring-2 focus:ring-essence-gold outline-none transition-all text-essence-blue" placeholder="Ex: Estêvão Ualane">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold uppercase tracking-widest text-slate-500">WhatsApp</label>
+                                    <div class="relative">
+                                        <input type="tel" required class="w-full p-4 pl-12 rounded-xl bg-essence-cream border-none focus:ring-2 focus:ring-essence-gold outline-none transition-all text-essence-blue" placeholder="+258">
+                                        <div class="absolute left-4 top-1/2 -translate-y-1/2 text-[#25D366]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 fill-current"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.4-16.5-14.7-27.6-32.8-30.8-38.3-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-widest text-slate-500">Serviço de Interesse</label>
+                                <select required class="w-full p-4 rounded-xl bg-essence-cream border-none focus:ring-2 focus:ring-essence-gold outline-none transition-all text-essence-blue appearance-none">
+                                    <optgroup label="Marketing Digital">
+                                        <option>Criação de conteúdos</option>
+                                        <option>Gestão de redes sociais</option>
+                                        <option>Copywriting (Escrita persuasiva)</option>
+                                        <option>Tráfego Pago (Anúncios)</option>
+                                        <option>Estratégia Digital Completa</option>
+                                    </optgroup>
+                                    <optgroup label="Desenvolvimento de Carreira">
+                                        <option>Elaboração de CV Profissional</option>
+                                        <option>Otimização de LinkedIn</option>
+                                        <option>Preparação para Entrevistas</option>
+                                        <option>Coaching de Carreira</option>
+                                        <option>Treinamento: Call Center e Atendimento ao Cliente</option>
+                                    </optgroup>
+                                    <option>Outros</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-widest text-slate-500">Mensagem</label>
+                                <textarea required class="w-full p-4 rounded-xl bg-essence-cream border-none focus:ring-2 focus:ring-essence-gold outline-none transition-all h-32 text-essence-blue" placeholder="Descreva brevemente o seu objectivo..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-primary btn-premium py-5 text-lg shadow-xl">
+                                Enviar Solicitação
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-essence-dark text-white py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-essence-orange flex items-center justify-center shadow-lg">
+                            <i data-lucide="diamond" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif font-bold text-3xl leading-none tracking-tight">ESSENCE</span>
+                            <span class="text-[10px] font-medium tracking-[0.3em] uppercase text-essence-gold">Consultoria & Serviços</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-10 leading-relaxed">
+                        Líderes em transformação digital e excelência profissional em Moçambique. O seu parceiro estratégico para o amanhã.
+                    </p>
+                    <div class="flex items-center gap-3 text-essence-gold font-serif italic text-xl">
+                        <span class="w-8 h-[1px] bg-essence-gold"></span>
+                        “O seu futuro começa aqui.”
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif font-bold mb-8 text-xl text-essence-gold">Explorar</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#home" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-essence-orange"></i> Início</a></li>
+                        <li><a href="#marketing" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-essence-orange"></i> Marketing</a></li>
+                        <li><a href="#carreira" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-essence-orange"></i> Carreira</a></li>
+                        <li><a href="#sobre" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-essence-orange"></i> Sobre Nós</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold mb-8 text-xl text-essence-gold">Suporte</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-essence-orange"></i> Privacidade</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-essence-orange"></i> Termos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-essence-orange"></i> FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-xs uppercase tracking-widest font-bold">
+                <p>© <span id="current-year"></span> ESSENCE Consultoria e Serviços. All Rights Reserved.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/258873453569" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 transform hover:scale-110 flex items-center justify-center group" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8 fill-current"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.4-16.5-14.7-27.6-32.8-30.8-38.3-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        <span class="absolute right-full mr-4 bg-white text-essence-blue px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl border border-essence-gold/20">Fale Connosco</span>
+        <span class="absolute -top-2 -left-2 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+        </span>
+    </a>
+
+    <!-- Service Modal -->
+    <div id="service-modal" class="modal-overlay" onclick="closeServiceModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeServiceModal(event)" class="absolute top-6 right-6 text-slate-400 hover:text-essence-blue transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div id="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Service Data
+        const services = {
+            'website-starter': {
+                title: 'Website STARTER (Básico)',
+                description: 'A solução ideal para quem está a começar a sua presença online. Um website simples, funcional e profissional para apresentar o seu negócio ao mundo.',
+                promoPrice: '1.500 MT',
+                realPrice: '2.250 MT',
+                features: ['Website simples e funcional', 'Design Responsivo', 'Integração WhatsApp', 'Botões de acção'],
+                icon: 'globe'
+            },
+            'website-growth': {
+                title: 'Website GROWTH (Intermédio)',
+                description: 'Para negócios que querem crescer e atrair clientes. Um website profissional, estruturado e com design moderno focado em resultados.',
+                promoPrice: '3.500 MT',
+                realPrice: '5.250 MT',
+                features: ['Website profissional e estruturado', 'Design moderno e personalizado', 'Integração WhatsApp', 'Formulário de contacto', 'SEO básico'],
+                icon: 'trending-up'
+            },
+            'website-premium': {
+                title: 'Website PREMIUM (Avançado)',
+                description: 'A solução definitiva para empresas que querem dominar o mercado digital. Um website completo, estratégico e focado em alta conversão.',
+                promoPrice: '7.000 MT',
+                realPrice: '10.500 MT',
+                features: ['Website completo e estratégico', 'Design premium focado em conversão', 'SEO avançado', 'Integração completa (WhatsApp + Redes)', 'Área de conteúdos (blog ou similar)'],
+                icon: 'rocket'
+            },
+            'identidade-visual': {
+                title: 'Identidade Visual Completa',
+                description: 'Criamos uma marca forte e memorável para o seu negócio. Inclui o desenvolvimento do conceito visual, logotipo principal e variações, paleta de cores, tipografia e o design de um panfleto promocional pronto para impressão.',
+                promoPrice: '1.500 MT',
+                realPrice: '2.250 MT',
+                features: ['Logotipo Profissional', 'Manual de Marca Básico', 'Design de Panfleto', 'Arquivos em Alta Resolução'],
+                icon: 'palette'
+            },
+            'portfolio': {
+                title: 'Portfólio de Negócio',
+                description: 'Um documento profissional e impactante que apresenta os seus serviços, história e diferenciais. Ideal para enviar a potenciais parceiros ou clientes corporativos via PDF ou WhatsApp.',
+                promoPrice: '1.500 MT',
+                realPrice: '2.250 MT',
+                features: ['Design Moderno', 'Escrita Persuasiva', 'Estrutura de Vendas', 'Formato Digital (PDF)'],
+                icon: 'briefcase'
+            },
+            'basico': {
+                title: 'Gestão de Redes: Básico',
+                description: 'O ponto de partida ideal para pequenos negócios. Garantimos que a sua marca esteja ativa e profissional nas redes sociais com conteúdos de qualidade.',
+                promoPrice: '5.000 MT',
+                realPrice: '7.500 MT',
+                features: ['8 Conteúdos Mensais', '1 Rede Social', 'Design Profissional', 'Planeamento Estratégico'],
+                icon: 'layout'
+            },
+            'intermedio': {
+                title: 'Gestão de Redes: Intermédio',
+                description: 'Para empresas que buscam crescimento real. Aumentamos a frequência de postagens e adicionamos copywriting estratégico para converter seguidores em clientes.',
+                promoPrice: '10.000 MT',
+                realPrice: '15.000 MT',
+                features: ['16 Conteúdos Mensais', 'Até 2 Redes Sociais', 'Copywriting Avançado', 'Tráfego Pago Básico'],
+                icon: 'layers'
+            },
+            'premium': {
+                title: 'Gestão de Redes: Premium',
+                description: 'A nossa solução mais completa. Gestão total da sua presença digital com foco em resultados máximos, relatórios detalhados e suporte prioritário.',
+                promoPrice: '15.000 MT',
+                realPrice: '22.500 MT',
+                features: ['25 Conteúdos Mensais', 'Redes Sociais Ilimitadas', 'Tráfego Profissional', 'Relatórios de Performance'],
+                icon: 'rocket'
+            },
+            'cv-pt': {
+                title: 'CV de Elite (Português)',
+                description: 'Desenvolvemos um currículo estratégico em português, optimizado para sistemas de recrutamento (ATS) e com design moderno que destaca as suas competências.',
+                promoPrice: '297 MT',
+                realPrice: '445 MT',
+                features: ['Otimização ATS', 'Design Profissional', 'Foco em Resultados', 'Formato PDF/Word'],
+                icon: 'file-text'
+            },
+            'cv-en': {
+                title: 'CV de Elite (Inglês)',
+                description: 'Currículo profissional em inglês para oportunidades internacionais. Tradução técnica e adaptação cultural para o mercado global.',
+                promoPrice: '359 MT',
+                realPrice: '540 MT',
+                features: ['Tradução Técnica', 'Padrão Internacional', 'Otimização ATS', 'Revisão Gramatical'],
+                icon: 'languages'
+            },
+            'carta-pt': {
+                title: 'Carta de Apresentação (PT)',
+                description: 'Uma carta persuasiva em português que complementa o seu CV, explicando por que você é o candidato ideal para a vaga.',
+                promoPrice: '159 MT',
+                realPrice: '240 MT',
+                features: ['Texto Persuasivo', 'Personalizada por Vaga', 'Design Coerente com CV', 'Foco em Storytelling'],
+                icon: 'mail'
+            },
+            'carta-en': {
+                title: 'Carta de Apresentação (EN)',
+                description: 'Cover Letter em inglês para candidaturas internacionais. Demonstre fluência e profissionalismo desde o primeiro contacto.',
+                promoPrice: '169 MT',
+                realPrice: '255 MT',
+                features: ['Business English', 'Estrutura Internacional', 'Adaptada ao Cargo', 'Revisão Nativa'],
+                icon: 'globe'
+            },
+            'linkedin-pro': {
+                title: 'LinkedIn Pro Optimization',
+                description: 'Transformamos o seu perfil do LinkedIn numa vitrine magnética para recrutadores e parceiros de negócio.',
+                promoPrice: '399 MT',
+                realPrice: '600 MT',
+                features: ['Headline Estratégica', 'About (Resumo) SEO', 'Configuração de Skills', 'Banner Personalizado'],
+                icon: 'linkedin'
+            },
+            'mentoria-vip': {
+                title: 'Mentoria VIP Individual',
+                description: 'Acompanhamento personalizado para acelerar a sua carreira. Preparação para entrevistas, negociação salarial e posicionamento de liderança.',
+                promoPrice: '2.500 MT',
+                realPrice: '3.750 MT',
+                features: ['Simulação de Entrevista', 'Estratégia de Carreira', 'Networking de Elite', 'Suporte via WhatsApp'],
+                icon: 'users'
+            },
+            'plano-voo': {
+                title: 'Plano de Voo (Carreira)',
+                description: 'Mapeamento completo das suas competências e definição de metas claras para os próximos 5 anos. Saiba exatamente onde quer chegar.',
+                promoPrice: '1.000 MT',
+                realPrice: '1.500 MT',
+                features: ['Análise de Perfil', 'Definição de Metas', 'Plano de Acção', 'Feedback Técnico'],
+                icon: 'compass'
+            }
+        };
+
+        function openServiceModal(id) {
+            const service = services[id];
+            const modalBody = document.getElementById('modal-body');
+            const overlay = document.getElementById('service-modal');
+
+            modalBody.innerHTML = `
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 bg-essence-cream rounded-2xl flex items-center justify-center text-essence-gold">
+                        <i data-lucide="${service.icon}" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-essence-blue">${service.title}</h3>
+                        <p class="text-essence-orange font-bold text-sm uppercase tracking-widest">Oferta Exclusiva</p>
+                    </div>
+                </div>
+                <p class="text-slate-600 mb-8 leading-relaxed">${service.description}</p>
+                <div class="bg-essence-cream p-6 rounded-2xl mb-8">
+                    <h4 class="font-bold text-essence-blue mb-4 uppercase text-xs tracking-widest">O que está incluído:</h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        ${service.features.map(f => `
+                            <li class="flex items-center gap-2 text-sm text-slate-700">
+                                <i data-lucide="check" class="w-4 h-4 text-essence-gold"></i> ${f}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                <div class="flex items-center justify-between gap-6">
+                    <div>
+                        <p class="text-xs text-slate-400 line-through mb-1">Preço Real: ${service.realPrice}</p>
+                        <p class="text-3xl font-bold text-essence-blue">${service.promoPrice}</p>
+                    </div>
+                    <a href="https://wa.me/258873453569?text=Olá! Gostaria de falar com um especialista sobre o serviço: ${service.title}" 
+                       target="_blank" 
+                       class="btn-whatsapp btn-premium px-8 py-4 rounded-xl font-bold shadow-lg">
+                        Falar com Especialista
+                    </a>
+                </div>
+            `;
+
+            overlay.classList.add('active');
+            lucide.createIcons();
+        }
+
+        function closeServiceModal(e) {
+            const overlay = document.getElementById('service-modal');
+            overlay.classList.remove('active');
+        }
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Current Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-2xl');
+            } else {
+                navbar.classList.remove('shadow-2xl');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // Reveal on Scroll
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal);
+        // Initial check
+        reveal();
+
+        // Form Submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+            
+            setTimeout(() => {
+                const successMsg = document.createElement('div');
+                successMsg.className = 'mt-6 p-4 bg-green-50 text-green-700 rounded-xl border border-green-100 text-center font-medium';
+                successMsg.textContent = 'Obrigado pelo seu interesse! A nossa equipa entrará em contacto em breve via WhatsApp.';
+                contactForm.appendChild(successMsg);
+                
+                contactForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                
+                setTimeout(() => successMsg.remove(), 5000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
